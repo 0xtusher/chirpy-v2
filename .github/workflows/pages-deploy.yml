@@ -49,10 +49,6 @@ jobs:
         run: bundle exec jekyll b -d "_site${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: "production"
-          SKIP_HTMLPROOFER: true
-
-      - name: Skip site
-        run: echo "skip"
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v4
